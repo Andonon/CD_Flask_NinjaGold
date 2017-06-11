@@ -1,4 +1,4 @@
-'''Ninja Gold Assignment 
+'''Ninja Gold Assignment
 by: Troy Center, troycenter1@gmail.com, Coding Dojo Python fundamentals, June 2017
 '''
 

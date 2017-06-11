@@ -28,8 +28,12 @@ footer {
 /***************************************************/
 /*     MAIN CSS                                    */
 /***************************************************/
-#gold {
-
+#goldcounter {
+    border: 2px goove grey;
+    width: 200px;
+    text-align: left;
+    padding: 10px;
+    margin: 0 auto;
 }
 #work {
     padding-left: 100px;
