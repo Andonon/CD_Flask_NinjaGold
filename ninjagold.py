@@ -35,28 +35,30 @@ def processmoney():
     print "35=== Got Form Post: ===", request.form
     #check if they have any gold
     hasgold()
-    currgold = 0
+    currgold = session['gold']
     print "39===Gold was ", session['gold']
     if request.form.get('action') == "farm":
         #add 10 to 20 gold
-        print "41=== Detected farm activity ==="
+        print "42=== Detected farm activity ==="
         earnings = getrandomnum(10, 20)
         currgold = currgold + earnings
-    elif request.form.get['action'] == "cave":
+    elif request.form.get('action') == "cave":
         #add 5 to 10 fold
-        print "=== Request Form: ", request.form
+        print "47=== Detected cave activity ==="
         earnings = getrandomnum(5, 10)
-        currgold = currgold +  earnings
-    elif request.form.get['action'] == "house":
+        currgold = currgold + earnings
+    elif request.form.get('action') == "house":
         #add 2 to 5 gold
-        print "=== Request Form: ", request.form
+        print "52=== Detected house activity ==="
         earnings = getrandomnum(2, 5)
         currgold = currgold +  earnings
-    elif request.form.get['action'] == "casino":
+    elif request.form.get('action') == "casino":
         #add -50 to 50 gold
-        print "=== Request Form: ", request.form
+        print "57=== Detected casino activity ==="
         earnings = getrandomnum(-50, 50)
         currgold = currgold +  earnings
+    else:
+        pass
     print "You earned ", earnings
     print "Gold is now", currgold
     session['gold'] = currgold
