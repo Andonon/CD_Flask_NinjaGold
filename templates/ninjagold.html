@@ -9,7 +9,7 @@
     <body>
         <div id='wrapper'>
             <h1>Ninja Gold Game</h1>
-            <h3 id="goldcounter">Your Gold: {{ gold }}</h3>
+            <h3 id="goldcounter">Your Gold: {{ session['gold'] }}</h3>
             <div id="work">
                 <div id="farm">
                     <h3>Farm</h3>
@@ -47,9 +47,11 @@
             </div>               
             <div id="activities">
                 <h3>Activities:</h3>
-                <textarea id="logs" rows="10" cols="100">
-                    {{ activities }}
-                </textarea>
+                <ul>
+                    {% for each in range(0, session['activities']|length) %}
+                        <li>{{ session['activities'][each] }}</li>
+                    {% endfor %}
+                </ul>
             </div>
             <footer>
                 <p>by Troy Center, Coding Dojo, June 2017</p>
